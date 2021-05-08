@@ -37,3 +37,17 @@ test('should sort descending with numbers', () => {
   expect(sortedArray[1].name).toBe('sam');
   expect(sortedArray[2].name).toBe('floyd');
 });
+
+test('should sort nested objects', () => {
+  const initialArray = [
+    { info: { name: 'sam', age: 32 } },
+    { info: { name: 'floyd', age: 17 } },
+    { info: { name: 'robert', age: 63 } },
+  ];
+  const sortedArray = simpleSorter(initialArray, 'info.name', {
+    descending: true,
+  });
+  expect(sortedArray[0].name).toBe('floyd');
+  expect(sortedArray[1].name).toBe('sam');
+  expect(sortedArray[2].name).toBe('robert');
+});
