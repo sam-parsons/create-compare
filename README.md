@@ -36,12 +36,12 @@ const createCompare = require('create-compare');
 const unsortedArray = [
   { name: 'Robert' },
   { name: 'Paul' },
-  { name: 'Champange' },
+  { name: 'Champagne' },
 ];
 
 const sortedNames = unsortedArray
-  .sort(createCompare('name')) // [{ name: 'Champange' }, { name: 'Paul' }, { name: 'Robert' }]
-  .map((person) => person.name); // sortedNames = ["Champange","Paul","Robert"]
+  .sort(createCompare('name')) // [{ name: 'Champagne' }, { name: 'Paul' }, { name: 'Robert' }]
+  .map((person) => person.name); // sortedNames = ["Champagne","Paul","Robert"]
 ```
 
 <i>Nested Properties</i>
@@ -53,7 +53,7 @@ const unsortedArray = [
   {
     data: {
       user: {
-        name: 'Champange',
+        name: 'Champagne',
         age: 69,
       },
     },
