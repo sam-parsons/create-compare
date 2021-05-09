@@ -10,11 +10,21 @@ npm install create-compare
 
 ## API
 
-### "property"
+```js
+const generatedCompareFunction = compareFunc(property);
+```
 
-> `string` | _required_
+### <i>Argument</i>
+
+> <b>property</b> | `string` | _required_
 
 For top-level properties, simply provide a string of the property you want to sort values on. For nested properties, use a string in the format `"prop.prop.prop"`.
+
+### <i>Return value</i>
+
+> <b>generatedCompareFunction</b> | `function(a: object, b: object)`
+
+Use this callback as an argument to `Array.prototype.sort`.
 
 ## Usage
 
