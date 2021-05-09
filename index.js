@@ -2,16 +2,9 @@ function createCompareFunc(propertyArr) {
   return function (a, b) {
     const aObj = findLocalObject(a, propertyArr);
     const bObj = findLocalObject(b, propertyArr);
-    if (
-      aObj[propertyArr[propertyArr.length - 1]] <
-      bObj[propertyArr[propertyArr.length - 1]]
-    )
-      return -1;
-    if (
-      aObj[propertyArr[propertyArr.length - 1]] >
-      bObj[propertyArr[propertyArr.length - 1]]
-    )
-      return 1;
+    const property = propertyArr[propertyArr.length - 1];
+    if (aObj[property] < bObj[property]) return -1;
+    if (aObj[property] > bObj[property]) return 1;
     return 0;
   };
 }
