@@ -40,9 +40,8 @@ const unsortedArray = [
 ];
 
 const sortedNames = unsortedArray
-  .sort(createCompare('name'))
-  .map((person) => person.name);
-// sortedNames = ["Champange","Paul","Robert"]
+  .sort(createCompare('name')) // [{ name: 'Champange' }, { name: 'Paul' }, { name: 'Robert' }]
+  .map((person) => person.name); // sortedNames = ["Champange","Paul","Robert"]
 ```
 
 <i>Nested Properties</i>
@@ -79,8 +78,7 @@ const unsortedArray = [
 
 const sortedNames = unsortedArray
   .sort(createCompare('data.user.age'))
-  .map((person) => person.name);
-// sortedNames = ["Robert","Paul","Champagne"]
+  .map((person) => person.name); // sortedNames = ["Robert","Paul","Champagne"]
 ```
 
 ## License
